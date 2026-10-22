@@ -1,0 +1,125 @@
+/* ==========================================================================
+   Variables de Colores - Temática Inteligencia Artificial
+   ========================================================================== */
+:root {
+  /* Paleta Principal: IA Neutra & Neón de Alta Tecnología */
+  --ia-bg-dark: #0b0f19;          /* Azul noche muy oscuro para fondo principal */
+  --ia-bg-card: #161f33;          /* Azul marino profundo para contenedores y tarjetas */
+  --ia-bg-card-hover: #1e2a45;    /* Color de elevación al pasar el cursor */
+  
+  --ia-primary: #00f0ff;          /* Cyan Neón / Luz cuántica (Acciones principales) */
+  --ia-secondary: #7000ff;        /* Púrpura Eléctrico / Redes neuronales (Acentos) */
+  --ia-accent: #ff007f;           /* Rosa Neón Magenta (Highlights y notificaciones) */
+  
+  --ia-text-main: #f0f4f8;        /* Blanco frío de alta legibilidad */
+  --ia-text-muted: #94a3b8;       /* Gris azulado para texto secundario */
+  --ia-border: rgba(0, 240, 255, 0.15); /* Borde sutil cian brillante */
+  
+  /* Sombras y Resplandores (Glow Effects) */
+  --ia-glow-primary: 0 0 15px rgba(0, 240, 255, 0.4);
+  --ia-glow-secondary: 0 0 15px rgba(112, 0, 255, 0.4);
+}
+
+/* ==========================================================================
+   Estilos Generales de Fondo y Texto
+   ========================================================================== */
+body {
+  background-color: var(--ia-bg-dark) !important;
+  color: var(--ia-text-main) !important;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Encabezados y Títulos */
+h1, h2, h3, h4, h5, h6 {
+  color: #ffffff !important;
+  letter-spacing: 0.5px;
+}
+
+/* Títulos con degradado de IA */
+h1, .titulo-principal {
+  background: linear-gradient(135deg, var(--ia-primary), var(--ia-secondary)) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  display: inline-block;
+}
+
+/* ==========================================================================
+   Enlaces y Botones
+   ========================================================================== */
+a {
+  color: var(--ia-primary) !important;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+a:hover {
+  color: var(--ia-accent) !important;
+  text-shadow: var(--ia-glow-primary);
+}
+
+/* Estilos para botones e interacciones */
+button, input[type="submit"], .btn {
+  background: linear-gradient(135deg, var(--ia-secondary), var(--ia-primary)) !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+button:hover, input[type="submit"]:hover, .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--ia-glow-primary) !important;
+}
+
+/* ==========================================================================
+   Tarjetas, Contenedores y Menús
+   ========================================================================== */
+div, section, article, header, footer, nav, table {
+  border-color: var(--ia-border);
+}
+
+/* Tarjetas y secciones destacadas */
+.card, .container, main, section {
+  background-color: var(--ia-bg-card);
+  border: 1px solid var(--ia-border);
+  border-radius: 8px;
+}
+
+/* Menús de Navegación */
+nav, header {
+  background-color: rgba(22, 31, 51, 0.9) !important;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--ia-border) !important;
+}
+
+/* ==========================================================================
+   Formularios e Entradas de Datos
+   ========================================================================== */
+input, textarea, select {
+  background-color: var(--ia-bg-dark) !important;
+  color: var(--ia-text-main) !important;
+  border: 1px solid var(--ia-border) !important;
+  border-radius: 4px;
+  padding: 8px 12px;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none !important;
+  border-color: var(--ia-primary) !important;
+  box-shadow: var(--ia-glow-primary) !important;
+}
+
+/* ==========================================================================
+   Texto Secundario y Elementos Pasivos
+   ========================================================================== */
+p, span, li {
+  color: var(--ia-text-main);
+}
+
+small, .text-muted, footer p {
+  color: var(--ia-text-muted) !important;
+}
